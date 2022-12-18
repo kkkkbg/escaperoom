@@ -1,8 +1,12 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
-const endPoint = 5; //질문 갯수
+const endPoint = 4; //질문 갯수
 var count = 0;
+
+window.onload = function(){
+    document.querySelector('#answer').focus();
+};
 
 function calResult(){
     var result;
@@ -118,6 +122,44 @@ imgDiv.appendChild(qImg);
                 ++count;
                 return false;
             }
+    }, false);
+
+    document.addEventListener("keyup", function(event) {
+        if (event.code === 'Enter') {
+            console.log("click=====");
+            var answervalue = document.getElementById('answer').value;
+            var answerImg = document.querySelectorAll('.answerImg');
+            // console.log(answerImg);
+            console.log("answerText : "+answerText);
+            // console.log("qIdx : "+qIdx);
+            //맞추면
+            if(answerText == answervalue){
+                document.getElementById('answer').value = "";
+                console.log("if문=====");
+                //사진 다 없어지게 함
+                for(let i = 0; i < answerImg.length; i++){
+                    answerImg[i].style.WebkitAnimation = "fadeOut 0.5s";
+                    answerImg[i].style.animation = "fadeOut 0.5s";
+                }
+                //버튼 다 없어지게 함
+                for(let i = 0; i < answer.length; i++){
+                    answer[i].disabled = true;    //버튼 비활성화
+                    answer[i].style.WebkitAnimation = "fadeOut 0.5s";
+                    answer[i].style.animation = "fadeOut 0.5s";
+                }
+                setTimeout(()=>{
+                    for(let i = 0; i < answerImg.length; i++){
+                        answerImg[i].style.display = 'none';
+                    }
+                    //다음 값 호출되도록 번호 늘려줌
+                    goNext(++qIdx);
+                },450)
+            }else{
+                alert("조금 더 생각해 보세요");
+                ++count;
+                return false;
+            }
+        }
     }, false);
 }
 
