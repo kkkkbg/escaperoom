@@ -20,7 +20,7 @@
 }
 
 .answerList:hover, .answerList:hover{
-    background-color: rgb(197, 86, 71);
+    background-color: rgb(133, 99, 154);
     color: whitesmoke;
     border: solid 3px whitesmoke;
 }
@@ -31,4 +31,5 @@
 }
 .answerBox{
     text-align: center;
+    padding-bottom: 50px;
 }
