@@ -1,6 +1,8 @@
 body{
-    background-color: rgb(96, 101, 143);
+    background-color: rgb(93, 94, 99);
+    background-image: url('/img/bg.png');
+    background-size: cover;
 }
 *{
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'East Sea Dokdo', cursive;
 }
