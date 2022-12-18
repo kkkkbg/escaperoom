@@ -1,9 +1,14 @@
 #main{
-    background-color: white;
+    background-color: rgb(45, 13, 13);
     width: 80%;
     text-align: center;
     border-radius: 20px;
 }
-p{
+#main p{
     font-size: 20px;
+    color: rgb(204, 204, 204);
+}
+
+#main h3{
+    color: rgb(203, 203, 203);
 }
