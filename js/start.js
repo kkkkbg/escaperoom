@@ -4,10 +4,6 @@ const result = document.querySelector("#result");
 const endPoint = 4; //질문 갯수
 var count = 0;
 
-window.onload = function(){
-    document.querySelector('#answer').focus();
-};
-
 function calResult(){
     var result;
     if(count <= 5){
@@ -69,8 +65,8 @@ function goResult(){
 function addAnswer(answerText, qIdx){
     console.log("addAnswer함수=====");
     var answerBox = document.querySelector('.answerBox');
-    answerBox.innerHTML = "<input type='text' id='answer' style='width: 415px; height: 30px;'>"
-                +"<button type='button' class='answerbtn' style='height: 37px;'>정답 확인</button>"
+    answerBox.innerHTML = "<input type='text' id='answer' style='width: 200px; height: 30px;'>&nbsp;"
+                +"<button type='button' class='answerbtn' style='height: 32px;'>정답 확인</button>"
     var answer = document.querySelector('.answerbtn');
     
 //img요소 생성
@@ -92,9 +88,6 @@ imgDiv.appendChild(qImg);
         console.log("click=====");
             var answervalue = document.getElementById('answer').value;
             var answerImg = document.querySelectorAll('.answerImg');
-            // console.log(answerImg);
-            console.log("answerText : "+answerText);
-            // console.log("qIdx : "+qIdx);
             //맞추면
             if(answerText == answervalue){
                 document.getElementById('answer').value = "";
