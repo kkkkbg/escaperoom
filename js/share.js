@@ -4,9 +4,8 @@ const url = 'https://savenewcomer.netlify.app/';
 function setShare(){
     var count = document.frm.count.value;  //틀린갯수
     const shareTitle = '김신입 구하기 성공( •̀ ω •́ )✧';
-   // const shareDes = infoList[resultAlt].name;  //책이름
-    const shareImage = url+ 'img/sn.jpg';
-    const shareURL = url;
+    const shareImage = url+ 'img/success_sn.jpg';
+    const shareURL = url; 
     
     Kakao.Share.sendDefault({
         objectType: 'feed',
@@ -30,3 +29,8 @@ function setShare(){
         ]
       });
 }
+
+//트위터
+function popUpTwitter() {
+	window.open("https://twitter.com/intent/tweet?text=[틀린 횟수 : "+count+"] 김신입 구하기 성공( •̀ ω •́ )✧  방탈출 게임 하러가기☞&url=https://savenewcomer.netlify.app/");
+};
