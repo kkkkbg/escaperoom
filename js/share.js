@@ -5,7 +5,7 @@ function setShare(){
     var count = document.frm.count.value;  //틀린갯수
     const shareTitle = '김신입 구하기 성공( •̀ ω •́ )✧';
    // const shareDes = infoList[resultAlt].name;  //책이름
-    const shareImage = '/img/key.jpg';
+    const shareImage = url+ 'img/key.jpg';
     const shareURL = url;
     
     Kakao.Share.sendDefault({
