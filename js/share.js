@@ -1,4 +1,4 @@
-const url = 'https://savenewcomer.netlify.app/';
+const url = 'https://savenewcomer.netlify.app';
 
 //카톡공유버튼 클릭했을 때 호출. 결과 화면에서 결과 번호를 받음
 function setShare(){
