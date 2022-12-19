@@ -6,7 +6,7 @@ const qnaList = [
        '내 인생이 평탄하게 흘러간다 했지ㅋ<br>'+
        '회사에서 연락와있네..ㅋ..ㅋㅋㅋ...<br>'+
        '메일은 뭐가 온거지?<br><br><fieldset style="border: 1px solid">✉<br>시간을 되돌리고 싶으신가요?<br>'+
-       ' 파일을 열어보세요<br>행운을 빕니다!</fieldset>',
+       '암호를 적어 잠겨진 파일을 열어보세요<br>행운을 빕니다!</fieldset>',
     subject: '수상한 파일',
     format: '영어로 입력하세요(소문자)',
     a: 'quickly'
