@@ -25,7 +25,7 @@ function setResult(){
     //가장 많이 선택 된 책번호
     let point = calResult();
     const resultName = document.querySelector('.resultname');
-    resultName.innerHTML = infoList[point].name+"("+count+"개 틀림)";
+    resultName.innerHTML = "틀린 횟수 : "+count;
 
     //img요소 생성
     // var resultImg = document.createElement('img');
@@ -41,8 +41,8 @@ function setResult(){
     // imgDiv.appendChild(resultImg);
 
     //책 설명 붙여줌
-    const resultDesc = document.querySelector('.resultDesc');
-    resultDesc.innerHTML = infoList[point].desc;
+    const countDiv = document.querySelector('.countDiv');
+    countDiv.innerHTML = "<input type='hidden' id='count' value='"+count+"'>";
 }
 
 //[3b] 결과화면 띄워주는 함수(마지막 질문화면 숨기고 결과화면 나타남)
@@ -65,7 +65,7 @@ function goResult(){
 function addAnswer(answerText, qIdx){
     console.log("addAnswer함수=====");
     var answerBox = document.querySelector('.answerBox');
-    answerBox.innerHTML = "<input type='text' id='answer' style='width: 200px; height: 30px;'>&nbsp;"
+    answerBox.innerHTML = "<input type='text' id='answer' placeholder='"+qnaList[qIdx].format+"' style='width: 200px; height: 30px;'>&nbsp;"
                 +"<button type='button' class='answerbtn' style='height: 32px;'>정답 확인</button>"
     var answer = document.querySelector('.answerbtn');
     
@@ -116,44 +116,6 @@ imgDiv.appendChild(qImg);
                 return false;
             }
     }, false);
-
-    document.addEventListener("keyup", function(event) {
-        if (event.code === 'Enter') {
-            console.log("click=====");
-            var answervalue = document.getElementById('answer').value;
-            var answerImg = document.querySelectorAll('.answerImg');
-            // console.log(answerImg);
-            console.log("answerText : "+answerText);
-            // console.log("qIdx : "+qIdx);
-            //맞추면
-            if(answerText == answervalue){
-                document.getElementById('answer').value = "";
-                console.log("if문=====");
-                //사진 다 없어지게 함
-                for(let i = 0; i < answerImg.length; i++){
-                    answerImg[i].style.WebkitAnimation = "fadeOut 0.5s";
-                    answerImg[i].style.animation = "fadeOut 0.5s";
-                }
-                //버튼 다 없어지게 함
-                for(let i = 0; i < answer.length; i++){
-                    answer[i].disabled = true;    //버튼 비활성화
-                    answer[i].style.WebkitAnimation = "fadeOut 0.5s";
-                    answer[i].style.animation = "fadeOut 0.5s";
-                }
-                setTimeout(()=>{
-                    for(let i = 0; i < answerImg.length; i++){
-                        answerImg[i].style.display = 'none';
-                    }
-                    //다음 값 호출되도록 번호 늘려줌
-                    goNext(++qIdx);
-                },450)
-            }else{
-                alert("조금 더 생각해 보세요");
-                ++count;
-                return false;
-            }
-        }
-    }, false);
 }
 
 //[2]다음 질문페이지 띄워줌
@@ -174,7 +136,7 @@ function goNext(qIdx){
 
     // 질문 갯수에 맞춰서 진행 바 늘리기
     var status = document.querySelector('.status');
-    status.innerHTML = qIdx+1+'번 문제';
+    status.innerHTML = qIdx+1+'번. '+qnaList[qIdx].subject;
 }
 
 // [1]시작하기 눌렀을 때 호출 될 함수
