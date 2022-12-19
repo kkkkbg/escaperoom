@@ -14,7 +14,7 @@
     <!-- sns share -->
     <!-- 메타태그를 이용해 링크공유 시 썸네일 사진,정보 표시할 수 있도록 데이터를 설정함(오픈그래프) -->
     <meta property="og:url" content="https://savenewcomer.netlify.app" />
-    <meta property="og:title" content="김신입의 첫출근을 구해주세요" />
+    <meta property="og:title" content="김신입의 인생을 구원해주세요" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/img/sn.jpg" />
     <meta property="og:description" content="김신입 구하기" />
@@ -49,12 +49,16 @@ Kakao.isInitialized();
             </div>
                 <p>
                     대학 졸업하고 친구들은 다 취업하는데<br>
-                    나만 백수인생 nn년 째....<br><br>드디어 취업에 성공했다!!<br>
+                    나만 백수인생 nn년 째....<br>드디어 취업에 성공했다!!<br>
                     내 인생에 직장인이 되는 날이 오긴 오는구나<br>
                     근데 이미 밤낮이 바뀌어버렸는데;;<br>
                     괜히 지각하면 안되니까 그냥 밤을 새고 일찍 출근하자!<br>
                     사랑받는 신입 가보자고~
                 </p>
+                <span>
+                    ✔ 답이 영어일 경우 소문자로만 적어주세요<br>
+                    ✔ 띄어쓰기나 특수문자는 포함되지 않습니다.<br>
+                </span>
                 <!-- 시작하기 누르면 서서히 사라지고 나타나도록 하는 함수 적용. 다음 페이지 불러옴 -->
                 <button type="button" class="btn btn-outline-light mt-3" onclick="return begin()">시작하기</button>
         </section>
@@ -82,7 +86,7 @@ Kakao.isInitialized();
                 <!-- 틀린 갯수 받을 데이터 -->
             </div>
             <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 col- mx-auto">
-                <img src="./img/result.jpg" alt="mainImage" class="img-fluid">
+                <img src="./img/success.jpg" alt="mainImage" class="img-fluid">
             </div>
             <div class="resultDesc">
                 벌써 내일이 첫 출근날이네<br>
@@ -98,7 +102,9 @@ Kakao.isInitialized();
             </script>
             <button type="button" class="btn btn-outline-success mt-3 kakao" onclick="js:moveHome()">한번 더 하기</button>
             <button type="button" class="btn btn-warning mt-3 kakao" onclick="js:setShare()">카톡으로 공유하기</button>
-        </section>
+            <button class="btn mt-3 btn-info" onclick="popUpTwitter()">트위터로 공유하기</button>
+            <br><br>
+            <sapn>email: kkbg52@gmail.com</sapn></section>
         <script src="./js/data.js" charset="utf-8"></script>
         <script src="./js/start.js" charset="utf-8"></script>
         <script src="./js/share.js" charset="utf-8"></script>
