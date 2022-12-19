@@ -2,7 +2,7 @@ const url = 'https://savenewcomer.netlify.app/';
 
 //카톡공유버튼 클릭했을 때 호출. 결과 화면에서 결과 번호를 받음
 function setShare(){
-    var count = document.querySelector('#count').val;  //틀린갯수
+    var count = document.frm.count.value;  //틀린갯수
     const shareTitle = '김신입 구하기 성공( •̀ ω •́ )✧';
    // const shareDes = infoList[resultAlt].name;  //책이름
     const shareImage = url + 'img/key.jpg';
