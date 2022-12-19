@@ -6,7 +6,7 @@ function setShare(){
     const shareTitle = '김신입 구하기 성공( •̀ ω •́ )✧';
    // const shareDes = infoList[resultAlt].name;  //책이름
     const shareImage = url + 'img/key.jpg';
-    const shareURL = url + 'index.html';  //이거 해줄려고 html 하나하나 만들었음,,
+    const shareURL = url;
     
     Kakao.Share.sendDefault({
         objectType: 'feed',
