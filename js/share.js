@@ -4,7 +4,7 @@ const url = 'https://savenewcomer.netlify.app/';
 function setShare(){
     var count = document.frm.count.value;  //틀린갯수
     const shareTitle = '김신입 구하기 성공( •̀ ω •́ )✧';
-    const shareImage = url+ 'img/success_sn.jpg';
+    const shareImage = url+ './img/success_sn.jpg';
     const shareURL = url; 
     
     Kakao.Share.sendDefault({
