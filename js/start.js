@@ -39,10 +39,10 @@ function setResult(){
     // resultImg.classList.add('img-fluid');
     // 이미지 들어오는 자리에 img요소 붙여줌 == <div id="resultImg"><img></div>
     // imgDiv.appendChild(resultImg);
-
+    
     //책 설명 붙여줌
     const countDiv = document.querySelector('.countDiv');
-    countDiv.innerHTML = "<input type='hidden' id='count' value='"+count+"'>";
+    countDiv.innerHTML = "<form name='frm'><input type='text' name='count' value='"+count+"'></form>";
 }
 
 //[3b] 결과화면 띄워주는 함수(마지막 질문화면 숨기고 결과화면 나타남)
