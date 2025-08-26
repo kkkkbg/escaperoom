@@ -14,7 +14,7 @@ https://savenewcomer.netlify.app/
 주어진 문제를 모두 해결하면 틀린 횟수를 띄워주며, sns로 공유할 수 있습니다.
 
 ## ✨화면
-<img src = "https://user-images.githubusercontent.com/108658971/209080759-9b4fc2de-c374-4eb9-baa7-1e3745c2f6ec.png" width="100%" height="40%"> | <img src = "https://user-images.githubusercontent.com/108658971/209080765-fb05b6f6-e42a-4314-be70-eaaa35d73c1c.png" width="100%" height="40%"> | <img src = "https://user-images.githubusercontent.com/108658971/209080766-ecaaabcf-4910-4d84-9dc1-755cb599d473.png" width="100%" height="40%">
+<img src = "https://github.com/user-attachments/assets/2307543b-7956-4bb1-ba4f-6d650ab3a62d" width="100%" height="40%"> | <img src = "https://github.com/user-attachments/assets/fd0054d5-8a00-43c1-ab3f-494beda5c034" width="100%" height="40%"> | <img src = "https://github.com/user-attachments/assets/aae8962a-7720-4342-88b5-c5a7183806ca" width="100%" height="40%">
 :---:|:---:|:---:|
 **메인** | **문제** | **결과 공유**
 
